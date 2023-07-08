@@ -12,7 +12,7 @@ export class EventModalComponent  implements OnInit {
 
   ngOnInit() {}
 
-  card: any;
+  event: any;
 
   dismiss() {
     this.modalController.dismiss();

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">
-      {{card.title}}
+      {{event.title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,24 +9,24 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>{{card.title}}</ion-card-title>
+      <ion-card-title>{{event.title}}</ion-card-title>
     </ion-card-header>
-    <img alt="Card Image" [src]="card.image" />
+    <img alt="Card Image" [src]="event.image" />
     <ion-card-content>
       <ion-text>
-        {{card.extendedDescription}}
+        {{event.extendedDescription}}
       </ion-text>
       <ion-grid>
         <ion-row>
           <ion-col>
             <div class="two-row-text">
-              <span class="text-title">{{card.location}}</span>
+              <span class="text-title">{{event.location}}</span>
               <span class="subtitle">Location</span>
             </div>
           </ion-col>
           <ion-col>
             <div class="two-row-text">
-              <span class="text-title">{{card.pax}}</span>
+              <span class="text-title">{{event.pax}}</span>
               <span class="subtitle">Pax</span>
             </div>
           </ion-col>
@@ -34,7 +34,7 @@
       </ion-grid>
       <ion-grid>
         <ion-row>
-          <ion-col class="price-text">RM{{card.price}}</ion-col>
+          <ion-col class="price-text">RM{{event.price}}</ion-col>
         </ion-row>
       </ion-grid>
       <ion-button expand="full" (click)="dismiss()">Close</ion-button>
