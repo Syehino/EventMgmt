@@ -1,0 +1,7 @@
+{
+  "name": "Event-Management-System",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

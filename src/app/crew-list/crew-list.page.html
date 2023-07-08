@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Crew
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    *ngFor="let crew of crews;let i = index"
+    [class.selected-card]="selectedCardIndex === i"
+    (click)="presentModal(crew,i)"
+  >
+    <img alt="Crew Image" src="{{ crew.image }}" />
+    <ion-card-header>
+      <ion-card-title>
+        {{ crew.title }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ crew.description }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

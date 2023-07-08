@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div class="profile-container">
+        <ion-img
+          src="{{ user.image }}"
+          alt="User Image"
+        >
+        </ion-img>
+        <h2 class="profile-name">{{ user.name }}</h2>
+        <ion-list>
+          <ion-item>
+            <ion-textarea [readonly]="true" label="Phone Number" placeholder="{{ user.phone }}"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-textarea [readonly]="true" label="Phone Number" placeholder="{{ user.email }}"></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

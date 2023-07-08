@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Event
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    *ngFor="let event of events; let i = index"
+    [class.selected-card]="selectedCardIndex === i"
+    (click)="presentModal(event,i)"
+  >
+    <img alt="Event Image" [src]="event.image" />
+    <ion-card-header>
+      <ion-card-title>
+        {{ event.title }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ event.description }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

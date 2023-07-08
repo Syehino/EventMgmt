@@ -1,0 +1,7 @@
+.selected-card {
+    position: relative;
+  }
+  
+  .selected-card::before {
+    content: '';
+  }
