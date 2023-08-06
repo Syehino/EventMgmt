@@ -8,13 +8,15 @@ import { EventListPageRoutingModule } from './event-list-routing.module';
 
 import { EventListPage } from './event-list.page';
 import { EventModalComponent } from '../event-modal/event-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EventListPageRoutingModule
+    EventListPageRoutingModule,
+    HttpClientModule,
   ],
   declarations: [EventListPage, EventModalComponent],
 })
