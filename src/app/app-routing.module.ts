@@ -15,9 +15,13 @@ const routes: Routes = [
     loadChildren: () => import('./crew-list/crew-list.module').then( m => m.CrewListPageModule)
   },
   {
+    path: 'booking-page',
+    loadChildren: () => import('./booking-page/booking-page.module').then( m => m.BookingPagePageModule)
+  },
+  {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
-  }
+  },
 ];
 @NgModule({
   imports: [

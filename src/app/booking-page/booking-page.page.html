@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Check if cartItems is empty -->
+  <ng-container *ngIf="cartItems.length > 0 || cartCrews.length > 0; else emptyCart">
+    <ion-list>
+      <!-- Use ion-card to display event item -->
+      <ion-card *ngFor="let event of cartItems">
+        <!-- Item image (if available) -->
+        <ion-img [src]="event.image"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ event.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Item price -->
+          <p>Price: {{ event.price }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    
+    <ion-list>
+      <!-- Use ion-card to display crews -->
+      <ion-card *ngFor="let crew of cartCrews">
+        <!-- Item image (if available) -->
+        <ion-img [src]="crew.image"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ crew.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Item price -->
+          <p>Price: {{ crew.price }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+     <!-- Order Summary -->
+    <ion-card>   
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <p>Events Total Price:</p>
+          </ion-col>
+          <ion-col size="6" class="price-column">
+            <p>{{ eventsTotalPrice }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <p>Crews Total Price:</p>
+          </ion-col>
+          <ion-col size="6" class="price-column">
+            <p>{{ crewsTotalPrice }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <h2>Overall Total Price:</h2>
+          </ion-col>
+          <ion-col size="6" class="price-column">
+            <h2>{{ totalPrice }}</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+      <!-- Checkout Button -->
+    <ion-button expand="full" (click)="checkout()">Checkout</ion-button>
+    </ion-card>
+      
+  </ng-container>
+
+  <!-- Empty cart message -->
+  <ng-template #emptyCart>
+    <div class="empty-cart-message">
+      <p>Your cart is empty.</p>
+    </div>
+  </ng-template>
+</ion-content>

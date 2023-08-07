@@ -7,6 +7,7 @@ export class CartService {
   private cartItems: any[] = [];
   private selectedEvent: any = null;
   private selectedCrews: any[] = [];
+  private orderHistory: any[] = [];
 
   constructor() {}
 
@@ -38,9 +39,9 @@ export class CartService {
   }
 
   getEventTotalPrice(): number {
-    let total = 0;
-    total = this.selectedEvent.price;
-    return total;
+    let EventTotal = 0;
+    EventTotal = this.selectedEvent?.price ?? 0;
+    return EventTotal;
   }
 
 
@@ -70,11 +71,18 @@ export class CartService {
   }
 
   getCrewsTotalPrice(): number {
-    let total = 0;
+    let CrewTotal = 0;
     this.selectedCrews.forEach((item) => {
-      total += item.price;
-      // Add more conditions for other types if necessary
+      CrewTotal += item.price;
     });
-    return total;
+    return CrewTotal;
   }
+
+  clearCart(): void {  
+    //clear cart
+    this.cartItems = [];
+    this.selectedEvent = null;
+    this.selectedCrews = [];
+  }
+  
 }
