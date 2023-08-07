@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://20.205.156.61:3000/api/events',
+  apiEndpoint: '',
 };
 
 /*
