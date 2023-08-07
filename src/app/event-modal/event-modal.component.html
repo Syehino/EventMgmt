@@ -37,8 +37,11 @@
           <ion-col class="price-text">RM{{event.price}}</ion-col>
         </ion-row>
       </ion-grid>
+      <ion-button expand="full" (click)="check(event)">Check</ion-button>
+      <ion-button expand="full" (click)="onBook(event)" [disabled]="isEventInCart">Book</ion-button>
       <ion-button expand="full" (click)="dismiss()">Close</ion-button>
+      <ion-content>
+      </ion-content>
     </ion-card-content>
   </ion-card>
-  <ion-backdrop (ionBackdropTap)="onCloseModal()"></ion-backdrop>
 </ion-content>

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://syednazirul-organic-lamp-pjrjwrjgqp6f69p4-3000.app.github.dev/api/events',
+  apiURL: 'http://20.205.156.61:3000/api'
+  //apiEndpoint: 'https://syednazirul-organic-lamp-pjrjwrjgqp6f69p4-3000.app.github.dev/api/events',
 };
 
 /*

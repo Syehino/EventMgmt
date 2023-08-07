@@ -8,13 +8,15 @@ import { CrewListPageRoutingModule } from './crew-list-routing.module';
 
 import { CrewListPage } from './crew-list.page';
 import { CrewModalComponent } from '../crew-modal/crew-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrewListPageRoutingModule
+    CrewListPageRoutingModule,
+    HttpClientModule,
   ],
   declarations: [CrewListPage, CrewModalComponent]
 })

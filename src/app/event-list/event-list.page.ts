@@ -6,7 +6,9 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-const apiEndpoint = environment.apiEndpoint;
+const APIUrl = environment.apiURL;
+const endpoint = '/events';
+const apiEndpoint = APIUrl + endpoint;
 
 @Component({
     selector: 'app-event-list',
