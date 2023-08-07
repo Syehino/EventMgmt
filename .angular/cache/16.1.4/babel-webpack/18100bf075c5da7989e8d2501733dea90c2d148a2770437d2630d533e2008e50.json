@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  apiEndpoint: 'https://syednazirul-organic-lamp-pjrjwrjgqp6f69p4-3000.app.github.dev/api/events',\n  production: true\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
