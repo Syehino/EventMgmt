@@ -66,4 +66,35 @@ async checkout() {
   await alert.present();
 }
 
+// Mock checkout process
+async clearcart() {
+  // Implement your checkout logic here, e.g., sending payment request to server, etc.
+  // For this mockup, we'll show a confirmation alert.
+
+  const alert = await this.alertController.create({
+    header: 'Clear Cart?',
+    message: 'Are you sure?',
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Booking canceled');
+        },
+      },
+      {
+        text: 'Yes',
+        handler: () => {
+          //add to order history
+          //clear cart
+          this.cartService.clearCart();
+          location.reload();
+        },
+      },
+    ],
+  });
+
+  await alert.present();
+}
+
 }

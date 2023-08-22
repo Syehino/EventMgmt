@@ -66,6 +66,7 @@
         </ion-row>
       </ion-grid> 
       <!-- Checkout Button -->
+    <ion-button expand="full" (click)="clearcart()">Clear Cart</ion-button>
     <ion-button expand="full" (click)="checkout()">Checkout</ion-button>
     </ion-card>
       
@@ -74,7 +75,7 @@
   <!-- Empty cart message -->
   <ng-template #emptyCart>
     <div class="empty-cart-message">
-      <p>Your cart is empty.</p>
+      <p class="ion-text-center center-text">Your cart is empty.</p>
     </div>
   </ng-template>
 </ion-content>

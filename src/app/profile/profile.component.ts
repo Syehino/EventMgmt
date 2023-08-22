@@ -9,7 +9,7 @@ export class ProfileComponent  implements OnInit {
 
   user:any = {
     name: 'Azwan Ali',
-    image: 'https://cdn.beautifulnara.net/wp-content/uploads/2020/01/15154604/azwan-ali-1.jpg',
+    image: 'https://dudeproducts.com/cdn/shop/articles/gigachad_1024x1024.jpg?v=1667928905',
     phone: '0123456789',
     email: 'azwanali@gmail.com',
   };
